@@ -1,0 +1,28 @@
+<h1>Members</h1>
+
+<table border="1" style="border-collapse: collapse">
+  <tr>
+    <th>#</th>
+    <th>Firstnam</th>
+    <th>Lastname</th>
+    <th>Age</th>
+    <th>Action</th>
+  </tr>
+  {% for person in people %}
+  <tr>
+    <td>{{ person.id }}</td>
+    <td>{{ person.firstname }}</td>
+    <td>{{ person.lastname }}</td>
+    <td>{{person.age}}</td>
+    <td>
+      <a href="delete/{{ person.id }}" style="color: red">delete</a>
+      &nbsp;|&nbsp;
+      <a href="update/{{ person.id }}" style="color: blue">update</a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+
+<p>
+  <a href="add/">Add member</a>
+</p>

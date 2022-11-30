@@ -1,0 +1,11 @@
+<h2>Add a person</h2>
+<form action="addrecord/" method="post">
+  {% csrf_token %}
+  <label for="first">firstname</label><br />
+  <input required type="text" name="firstname" id="firts" /><br />
+  <label for="last">lastname</label><br />
+  <input required type="text" name="lastname" id="last" /><br />
+  <label for="age">age</label><br />
+  <input required type="number" name="age" id="age" /><br /><br />
+  <button type="submit" name="submit">Submit</button>
+</form>
